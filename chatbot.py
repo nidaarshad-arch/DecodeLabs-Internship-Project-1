@@ -54,7 +54,7 @@ def run_chatbot():
                 "I'm a rule-based AI chatbot built using Python."
                 )
         elif user_input in {"i am fine", "i'm fine", "im fine", "fine","I'm great","good","i am good","im good","great"}:
-            print(f"{BOT_NAME}: That's great to hear! 😊")
+            print(f"{BOT_name}: That's great to hear! 😊")
         elif user_input == "help":
             print(f"""{BOT_name}: Here are some things you can ask me
             • Greetings: hello, hi, hey
@@ -66,6 +66,63 @@ def run_chatbot():
             • Time and date: what time is it, what is the date
             • Exit: exit, quit, bye
             """)
+        elif user_input in {
+            "what is ai",
+            "what is artificial intelligence",
+            "define ai",
+            "define artificial intelligence",
+            "tell me about ai",
+            "tell me about artificial intelligence"
+                }:
+            print(
+            f"{BOT_name}: Artificial Intelligence (AI) is a field of "
+            "computer science that enables machines to perform tasks that "
+            "normally require human intelligence."
+            )
+        elif user_input in {
+            "what is machine learning",
+            "define machine learning",
+            "what is ml",
+            "tell me about machine learning",
+            "tell me about ml"
+            }:
+            print(
+            f"{BOT_name}: Machine Learning (ML) is a branch of AI that "
+            "allows computers to lear   n patterns from data and make "
+            "predictions or decisions."
+            )
+        elif user_input in {
+            "what is deep learning",
+            "define deep learning",
+            "tell me about deep learning"
+            }:
+            print(
+                f"{BOT_name}: Deep Learning is a subset of Machine Learning "
+                "that uses artificial neural networks with multiple layers "
+                "to learn complex patterns from data."
+            )
+        elif user_input in {
+            "what is nlp",
+            "define nlp",
+            "what is natural language processing",
+            "tell me about nlp",
+            "tell me about natural language processing"
+            }:
+            print(
+                f"{BOT_name}: Natural Language Processing (NLP) is a field "
+                "of AI that helps computers understand, process, and generate "
+                "human language."
+                )
+        elif user_input in {
+            "what is a rule based chatbot",
+            "what is rule based chatbot",
+            "define rule based chatbot"
+            }:
+            print(
+                f"{BOT_NAME}: A rule-based chatbot responds to users using "
+                "predefined rules, conditions, and programmed responses. "
+                "It does not learn from data like a Machine Learning model."
+                )
         
 
 if __name__ == "__main__":
