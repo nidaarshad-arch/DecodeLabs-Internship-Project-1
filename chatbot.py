@@ -25,10 +25,14 @@ def run_chatbot():
         if user_input in {"exit","quit","bye","goodbye"}:
             print(f"{BOT_name}: Goodbye! Keep learning, keep building, and never stop exploring.")
             break
-        print(
-            f"{BOT_name}: I received your message: "
-            f"'{user_input}'. I'm still learning how to respond!"
-        )
+        if user_input in {"hello", "hi", "hey", "good morning", "good evening"}:
+            response = random.choice([
+                "Hello! How can I help you today?",
+                "Hi there! Nice to talk with you.",
+                "Hey! What would you like to know?",
+                "Hello! I'm happy to assist you."
+                ])
+            print(f"{BOT_name}: {response}")
         
 
 if __name__ == "__main__":
