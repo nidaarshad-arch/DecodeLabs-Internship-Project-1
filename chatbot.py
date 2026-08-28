@@ -10,7 +10,7 @@ def display_welcome():
     print(f"\n{BOT_name}:Hello! I am {BOT_name}","your rule-based AI assistant.")
     print("You can ask me about AI, Machine Learning, Python, or simply have a small" \
     "conversation with me.")
-    print("\n Type 'help' to see available topics.")
+    print("\nType 'help' to see available topics.")
     print("Type 'exit' anytime to end the conversation.\n")
 
 
@@ -191,8 +191,45 @@ def run_chatbot():
                 ])
 
             print(f"{BOT_name}: {response}")
+        elif user_input in {
+            "what time is it",
+            "tell me the time",
+            "current time",
+            "time",
+            "tell me current time",
+            "tell me the current time"
+            }:
+            current_time = datetime.now().strftime("%I:%M %p")
+            print(f"{BOT_name}: The current time is {current_time}.")
+        elif user_input in {
+            "what is the date",
+            "what is today's date",
+            "current date",
+            "tell me today's date",
+            "date"
+            }:
+            current_date = datetime.now().strftime("%B %d, %Y")
+            print(f"{BOT_name}: Today's date is {current_date}.")
+        elif user_input in {
+            "what day is it",
+            "what is today",
+            "current day",
+            "tell me what is today"
+            "day"
+            }:
+            current_day = datetime.now().strftime("%A")
+            print(f"{BOT_name}: Today is {current_day}.")
         
-        
+        else:
+            response = random.choice([
+                "I'm sorry, I don't understand that yet. Try typing 'help' to see what I can do.",
+                "That's something I haven't been trained to answer yet. Please try another question.",
+                "Hmm, I didn't understand that. You can ask me about AI, Machine Learning, Python, time, date, or jokes.",
+                "I'm still a rule-based chatbot, so I can only answer questions I have been programmed to understand."
+            ])
+
+            print(f"{BOT_name}: {response}")
+    
 
 if __name__ == "__main__":
     run_chatbot()
