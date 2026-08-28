@@ -48,7 +48,7 @@ def run_chatbot():
                 "Anytime! Feel free to ask me more questions."
                 ])
             print(f"{BOT_name}: {response}")
-        elif user_input in {"what is your name", "who are you", "tell me your name","Tell me about yourself","tell me about you"}:
+        elif user_input in {"what is your name", "who are you", "tell me your name", "tell me about yourself", "tell me about you"}:
             print(
                 f"{BOT_name}: My name is {BOT_name}! "
                 "I'm a rule-based AI chatbot built using Python."
@@ -119,10 +119,79 @@ def run_chatbot():
             "define rule based chatbot"
             }:
             print(
-                f"{BOT_NAME}: A rule-based chatbot responds to users using "
+                f"{BOT_name}: A rule-based chatbot responds to users using "
                 "predefined rules, conditions, and programmed responses. "
                 "It does not learn from data like a Machine Learning model."
                 )
+        elif user_input in {
+            "what is python",
+            "define python",
+            "tell me about python"
+            }:
+            print(
+                f"{BOT_name}: Python is a high-level, easy-to-read programming "
+                "language. It is widely used in web development, data science, "
+                "Artificial Intelligence, automation, and many other fields."
+                )
+        elif user_input in {
+            "what is a list",
+            "define list",
+            "what is list",
+            "tell me about list",
+            "tell me about list in python"
+            }:
+            print(
+                f"{BOT_name}: A list is a Python data structure used to store "
+                "multiple items in a single variable. Lists are ordered and "
+                "can be modified."
+                )
+        elif user_input in {
+            "what is a dictionary",
+            "define dictionary",
+            "what is dictionary",
+            "tell me about dictionary",
+            "tell me about dictionary in python"
+            }:
+            print(
+            f"{BOT_name}: A dictionary is a Python data structure that "
+            "stores data in key-value pairs."
+            )
+        elif user_input in {
+            "what is a loop",
+            "define loop",
+            "what is loop",
+            "tell me about loop",
+            "tell me about loop in python"
+            }:
+            print(
+                f"{BOT_name}: A loop is used to repeat a block of code. "
+                "Python mainly uses for loops and while loops."
+            )
+        elif user_input in {
+            "what is a function",
+            "define function",
+            "what is function",
+            "tell me about function",
+            "tell me about fucntion in python"
+            }:
+            print(
+                f"{BOT_name}: A function is a reusable block of code designed "
+                "to perform a specific task."
+                )
+        elif user_input in {
+            "tell me a joke",
+            "tell a joke",
+            "joke",
+            "make me laugh"
+            }:
+            response = random.choice([
+                "Why do programmers prefer dark mode? Because light attracts bugs! 🐛😂",
+                "Why did the Python programmer wear glasses? Because they couldn't C! 🤓",
+                "There are 10 types of people in the world: those who understand binary and those who don't! 😂"
+                ])
+
+            print(f"{BOT_name}: {response}")
+        
         
 
 if __name__ == "__main__":
