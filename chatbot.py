@@ -53,8 +53,65 @@ def run_chatbot():
                 f"{BOT_name}: My name is {BOT_name}! "
                 "I'm a rule-based AI chatbot built using Python."
                 )
-        elif user_input in {"i am fine", "i'm fine", "im fine", "fine","I'm great","good","i am good","im good","great"}:
-            print(f"{BOT_name}: That's great to hear! 😊")
+        elif user_input in {"i am fine", 
+                            "i'm fine", 
+                            "im fine", 
+                            "fine",
+                            "I'm great",
+                            "good",
+                            "i am good",
+                            "im good",
+                            "great"}:
+            print(f"{BOT_name}: That's great to hear! ")
+        elif user_input in {
+            "what's up",
+            "whats up",
+            "wassup",
+            "sup",
+            "how's it going",
+            "hows it going",
+            "how is it going"
+            }:
+            response = random.choice([
+                "Not much! I'm here and ready to chat. What's up with you?",
+                "Everything's running smoothly on my side!  How about you?",
+                "Just waiting for your next question. "
+                ])
+            print(f"{BOT_name}: {response}")
+        elif user_input in {
+            "not good",
+            "i am not good",
+            "i'm not good",
+            "im not good",
+            "bad",
+            "i feel bad",
+            "i am sad",
+            "sad",
+            "i feel sad",
+            "feeling sad"
+            }:
+            response = random.choice([
+                "I'm sorry to hear that. I hope things get better soon. 💙",
+                "That sounds tough. Be gentle with yourself and take things one step at a time.",
+                "I'm sorry you're not feeling great. Sometimes a small break can help. 🌿"
+            ])
+            print(f"{BOT_name}: {response}")
+        elif user_input in {
+            "okay",
+            "ok",
+            "okay then",
+            "alright",
+            "sure",
+            "ok"
+            }:
+            response = random.choice([
+                "Alright! ",
+                "Sounds good!",
+                "Okay! What's next?",
+                "Got it! "
+                ])
+            print(f"{BOT_name}: {response}")
+        
         elif user_input == "help":
             print(f"""{BOT_name}: Here are some things you can ask me
             • Greetings: hello, hi, hey
