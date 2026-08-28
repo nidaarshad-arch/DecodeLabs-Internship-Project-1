@@ -1,7 +1,7 @@
 import random
-from datetime import datetime
+from datetime import datetime           
 
-BOT_name='ByteBot'
+BOT_name='ByteBot'          #Rule-based Bot name
 
 def display_welcome():
     print("="*65)
@@ -19,12 +19,16 @@ def run_chatbot():
     display_welcome()
     while True:
         user_input=input("You: ").lower().strip()
+
         if not user_input:
             print(f"{BOT_name}: Please type something so I can help you.")
             continue
+        # Handle exit commands
         if user_input in {"exit","quit","bye","goodbye","ok bye","ok goodbye","okay bye","okay goodbye"}:
             print(f"{BOT_name}: Goodbye! Keep learning, keep building, and never stop exploring.")
             break
+
+        # Handle greeting
         if user_input in {"hello", "hi", "hey", "good morning", "good evening"}:
             response = random.choice([
                 "Hello! How can I help you today?",
@@ -34,6 +38,7 @@ def run_chatbot():
                 ])
             print(f"{BOT_name}: {response}")
 
+        # Handle how are you
         elif user_input in {"how are you", "how are you?", "how r you","how are u","how are u?","how r u","how r u?"}:
             response = random.choice([
                 "I'm doing great! Thanks for asking. ",
@@ -41,6 +46,8 @@ def run_chatbot():
                 "I'm great! How about you?"
                 ])
             print(f"{BOT_name}: {response}")
+
+        # handle appreciation
         elif user_input in {"thank you", "thanks", "thankyou"}:
             response = random.choice([
                 "You're welcome! 😊",
@@ -48,21 +55,27 @@ def run_chatbot():
                 "Anytime! Feel free to ask me more questions."
                 ])
             print(f"{BOT_name}: {response}")
+
+        # handle bot's related question
         elif user_input in {"what is your name", "who are you", "tell me your name", "tell me about yourself", "tell me about you"}:
             print(
                 f"{BOT_name}: My name is {BOT_name}! "
                 "I'm a rule-based AI chatbot built using Python."
                 )
-        elif user_input in {"i am fine", 
-                            "i'm fine", 
-                            "im fine", 
-                            "fine",
-                            "I'm great",
-                            "good",
-                            "i am good",
-                            "im good",
-                            "great"}:
+        elif user_input in {
+            "i am fine", 
+            "i'm fine", 
+            "im fine", 
+            "fine",
+            "I'm great",
+            "good",
+            "i am good",
+            "im good",
+            "great"
+            }:
             print(f"{BOT_name}: That's great to hear! ")
+
+        # handle casual conversation
         elif user_input in {
             "what's up",
             "whats up",
@@ -78,6 +91,8 @@ def run_chatbot():
                 "Just waiting for your next question. "
                 ])
             print(f"{BOT_name}: {response}")
+
+        # handle negative responses    
         elif user_input in {
             "not good",
             "i am not good",
@@ -96,13 +111,15 @@ def run_chatbot():
                 "I'm sorry you're not feeling great. Sometimes a small break can help. 🌿"
             ])
             print(f"{BOT_name}: {response}")
+
+        
         elif user_input in {
             "okay",
             "ok",
             "okay then",
             "alright",
             "sure",
-            "ok"
+            "well"
             }:
             response = random.choice([
                 "Alright! ",
@@ -111,7 +128,8 @@ def run_chatbot():
                 "Got it! "
                 ])
             print(f"{BOT_name}: {response}")
-        
+
+        # Handle Help inputs      
         elif user_input == "help":
             print(f"""{BOT_name}: Here are some things you can ask me
             • Greetings: hello, hi, hey
@@ -123,6 +141,8 @@ def run_chatbot():
             • Time and date: what time is it, what is the date
             • Exit: exit, quit, bye
             """)
+
+        # AI inputs
         elif user_input in {
             "what is ai",
             "what is artificial intelligence",
@@ -136,6 +156,7 @@ def run_chatbot():
             "computer science that enables machines to perform tasks that "
             "normally require human intelligence."
             )
+        # Machine Learning Inputs
         elif user_input in {
             "what is machine learning",
             "define machine learning",
@@ -148,6 +169,8 @@ def run_chatbot():
             "allows computers to lear   n patterns from data and make "
             "predictions or decisions."
             )
+
+        # Deep learning Inputs
         elif user_input in {
             "what is deep learning",
             "define deep learning",
@@ -158,6 +181,8 @@ def run_chatbot():
                 "that uses artificial neural networks with multiple layers "
                 "to learn complex patterns from data."
             )
+
+        # Natural Language Processing Inputs
         elif user_input in {
             "what is nlp",
             "define nlp",
@@ -170,6 +195,8 @@ def run_chatbot():
                 "of AI that helps computers understand, process, and generate "
                 "human language."
                 )
+
+        #Rule based chatbot 
         elif user_input in {
             "what is a rule based chatbot",
             "what is rule based chatbot",
@@ -180,6 +207,8 @@ def run_chatbot():
                 "predefined rules, conditions, and programmed responses. "
                 "It does not learn from data like a Machine Learning model."
                 )
+
+        #Python Definition
         elif user_input in {
             "what is python",
             "define python",
@@ -190,6 +219,8 @@ def run_chatbot():
                 "language. It is widely used in web development, data science, "
                 "Artificial Intelligence, automation, and many other fields."
                 )
+
+        #List in Python
         elif user_input in {
             "what is a list",
             "define list",
@@ -202,6 +233,8 @@ def run_chatbot():
                 "multiple items in a single variable. Lists are ordered and "
                 "can be modified."
                 )
+
+        #Dictionary in Python
         elif user_input in {
             "what is a dictionary",
             "define dictionary",
@@ -213,6 +246,8 @@ def run_chatbot():
             f"{BOT_name}: A dictionary is a Python data structure that "
             "stores data in key-value pairs."
             )
+
+        #Loop in Python
         elif user_input in {
             "what is a loop",
             "define loop",
@@ -224,6 +259,8 @@ def run_chatbot():
                 f"{BOT_name}: A loop is used to repeat a block of code. "
                 "Python mainly uses for loops and while loops."
             )
+
+        #Define Function
         elif user_input in {
             "what is a function",
             "define function",
@@ -235,6 +272,8 @@ def run_chatbot():
                 f"{BOT_name}: A function is a reusable block of code designed "
                 "to perform a specific task."
                 )
+
+        #Jokes
         elif user_input in {
             "tell me a joke",
             "tell a joke",
@@ -245,9 +284,20 @@ def run_chatbot():
                 "Why do programmers prefer dark mode? Because light attracts bugs! 🐛😂",
                 "Why did the Python programmer wear glasses? Because they couldn't C! 🤓",
                 "There are 10 types of people in the world: those who understand binary and those who don't! 😂"
+                "Why did the developer go broke? Because he used up all his cache! 💸😂",
+                "There are 10 types of people in the world: those who understand binary and those who don't! 🤓",
+                "Why was the computer tired? It had too many tabs open! 😭😂",
+                "Why did the programmer quit his job? Because he didn't get arrays! 🤖",
+                "What is a computer's favorite snack? Microchips! 🍟😂",
+                "Why did the AI cross the road? To optimize the other side! 🤖😂",
+                "I told my computer I needed a break... now it won't stop sending me vacation ads. 😂",
+                "Why was the smartphone wearing glasses? Because it lost its contacts! 🤓📱",
+                "Why did the student eat their homework? Because the teacher said it was a piece of cake! 🍰😂",
                 ])
 
             print(f"{BOT_name}: {response}")
+
+        #Current Time
         elif user_input in {
             "what time is it",
             "tell me the time",
@@ -258,6 +308,8 @@ def run_chatbot():
             }:
             current_time = datetime.now().strftime("%I:%M %p")
             print(f"{BOT_name}: The current time is {current_time}.")
+
+        #Curent Date
         elif user_input in {
             "what is the date",
             "what is today's date",
@@ -267,6 +319,8 @@ def run_chatbot():
             }:
             current_date = datetime.now().strftime("%B %d, %Y")
             print(f"{BOT_name}: Today's date is {current_date}.")
+
+        #Current Day
         elif user_input in {
             "what day is it",
             "what is today",
@@ -276,7 +330,9 @@ def run_chatbot():
             }:
             current_day = datetime.now().strftime("%A")
             print(f"{BOT_name}: Today is {current_day}.")
-        
+
+
+        #Handle Fallbacks
         else:
             response = random.choice([
                 "I'm sorry, I don't understand that yet. Try typing 'help' to see what I can do.",
